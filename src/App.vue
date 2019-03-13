@@ -9,5 +9,9 @@ import TestStore from './module';
 @Component({
   methods: TestStore.mapMutations(['setTest'])
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  mounted() {
+    this.setTest(123);
+  }
+}
 </script>
